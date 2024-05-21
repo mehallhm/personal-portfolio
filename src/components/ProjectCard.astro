@@ -1,13 +1,17 @@
 ---
 interface Props {
 	title: string;
+	href: string;
 	body: string;
 }
 
-const { title, body } = Astro.props;
+const { title, href, body } = Astro.props;
 ---
 
-<div class="hover:bg-secondary rounded px-4 py-4 group cursor-pointer transition-all ease-in duration-150">
+<a
+	class="hover:bg-secondary rounded px-4 py-4 group cursor-pointer transition-all ease-in duration-150"
+	href={href}
+>
 	<div class="flex gap-2 items-center">
 		<h4
 			class="text-[#DCE5E2] font-semibold group-hover:font-bold group-hover:pl-2 transition-all ease-in duration-150"
@@ -33,4 +37,4 @@ const { title, body } = Astro.props;
 	<p>
 		{body}
 	</p>
-</div>
+</a>
