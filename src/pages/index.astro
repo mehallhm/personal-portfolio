@@ -2,13 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import Socials from "../components/Socials.astro";
+import Status from "../components/Status.astro";
 ---
 
 <Layout title="Michael Mehall">
 	<main class="flex justify-center">
-		<div class="grain"></div>
 		<div class="max-w-screen-lg lg:py-20 py-12 text-[#95B2A8]">
-			<div class="flex flex-col lg:grid lg:grid-cols-2 px-4">
+		<div class="grain"></div>
+			<div
+				class="flex flex-col lg:grid lg:grid-cols-2 px-4 mb-8"
+			>
 				<div>
 					<h1
 						class="text-[#DCE5E2] md:text-5xl text-4xl font-semibold"
@@ -26,33 +29,7 @@ import Socials from "../components/Socials.astro";
 							Northeastern University
 						</a>
 					</h3>
-					<p class="text-[#95B2A8] max-w-sm">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="w-4 h-4 inline"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							><path
-								stroke="none"
-								d="M0 0h24v24H0z"
-								fill="none"
-							></path><path
-								d="M3 21c-.667 -.667 3.262 -6.236 11.785 -16.709a3.5 3.5 0 1 1 5.078 4.791c-10.575 8.612 -16.196 12.585 -16.863 11.918z"
-							></path><path
-								d="M17.5 6.5l-1 1"
-							></path><path
-								d="M17 7c-2.333 -2.667 -3.5 -4 -5 -4s-2 1 -2 2c0 4 8.161 8.406 6 11c-1.056 1.268 -3.363 1.285 -5.75 .808"
-							></path><path
-								d="M5.739 15.425c-1.393 -.565 -3.739 -1.925 -3.739 -3.425"
-							></path><path
-								d="M19.5 9.5l1.5 1.5"
-							></path></svg
-						> Letting my threads panic for pleasure
-					</p>
+					<Status />
 					<Socials />
 				</div>
 				<div class="lg:py-0 py-4">
@@ -84,47 +61,61 @@ import Socials from "../components/Socials.astro";
 				</div>
 			</div>
 
-			<h3
-				class="mt-8 pl-4 text-[#DCE5E2] text-xl font-semibold mb-4"
+			<a
+				class="pl-4 text-[#DCE5E2] text-xl font-semibold mb-4 hover:underline decoration-wavy"
+				href="/projects"
 			>
 				Projects
-			</h3>
+			</a>
 
 			<div
 				class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2"
 			>
 				<ProjectCard
-					title="🚧 Panamax 🚧"
+					title="Panamax"
+					wip={true}
 					href="https://github.com/mehallhm/panamax"
 					body="WIP - A Docker control panel based around the compose / stack workflow. Built in Golang and SolidJS, it allows for cluster management for which Swarm would be overkill"
 				/>
 				<ProjectCard
+					title="Carbon Connect"
+					wip={false}
+					href="https://github.com/mehallhm/wafflers"
+					body="Using a linear regression, Carbon Connect calculates an indivudal's carbon footprint while pairing them with environmental NGOs using TF-IDF and cosine similarity"
+				/>
+				<ProjectCard
 					title="Let's Link"
+					wip={false}
 					href="https://github.com/mehallhm/hackbeanpot24-letslink"
 					body="Built during Hack Beanpot 2024, Let's Link is a digital tool that searches for free time between people's schedules. Integrated with Google Calander to pull realtime data"
 				/>
 				<ProjectCard
 					title="Muncher"
+					wip={false}
 					href="https://github.com/mehallhm/muncher"
 					body="A modern replacement for NU Dining - provides hours and menus for the on-campus vendors at Northeastern University build with Astro and HTMX. Part of my initiaitve under the NU Information Project"
 				/>
 				<ProjectCard
 					title="Deploy Advisor"
+					wip={false}
 					href="https://github.com/altwd"
 					body="A tool built on When I Work to provide macro statistics and algorithmically choose the best employee to deploy in ECMO Locums organisations. Built with SvelteKit"
 				/>
 				<ProjectCard
 					title="V-Form"
+					wip={false}
 					href="https://github.com/Cheyenne-Moutain-Computer-Science-Club/V-Form"
 					body="A form tool that allows the creation of distributable forms with unique and custom question. Used by 1200+ students for Student Government elections"
 				/>
 				<ProjectCard
 					title="smb-gym"
+					wip={false}
 					href="https://github.com/mehallhm/smb-gym"
 					body="A custom OpenAI gym built around Ahmed Khalifa's Java Super Mario Bros that allows for custom data and level injection for Deep Q-Learning Neural Networks"
 				/>
 				<ProjectCard
 					title="Spoon Game"
+					wip={false}
 					href="https://github.com/Cheyenne-Moutain-Computer-Science-Club/spoonSite"
 					body="A live scoreboard for the 'Spoon Game' in District 12. Built with Nextjs and Tailwind, the site allowed for Google authenticated users to 'tag' people and accumulate points"
 				/>

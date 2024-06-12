@@ -1,0 +1,87 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+---
+
+<Layout title="Michael Mehall">
+	<main class="flex flex-col justify-center items-center text-[#95B2A8]">
+		<div class="grain"></div>
+		<div class="max-w-screen-lg lg:py-20 py-12 text-[#95B2A8]">
+			<div>
+				<h1
+					class="text-[#DCE5E2] md:text-5xl text-4xl font-semibold"
+				>
+					Michael Mehall
+				</h1>
+				<h3 class="text-[#DCE5E2] md:text-xl py-2">
+					Student at
+					<a
+						href="https://northeastern.edu"
+						class="hover:underline decoration-wavy"
+					>
+						Northeastern University
+					</a>
+				</h3>
+			</div>
+		</div>
+
+		<h2
+			class="pl-4 text-[#DCE5E2] text-xl font-semibold mb-4 hover:underline decoration-wavy"
+		>
+			Projects
+		</h2>
+
+		<div
+			class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2"
+		>
+			<ProjectCard
+				title="Panamax"
+				wip={true}
+				href="https://github.com/mehallhm/panamax"
+				body="WIP - A Docker control panel based around the compose / stack workflow. Built in Golang and SolidJS, it allows for cluster management for which Swarm would be overkill"
+			/>
+			<ProjectCard
+				title="Carbon Connect"
+				wip={false}
+				href="https://github.com/mehallhm/wafflers"
+				body="Using a linear regression, Carbon Connect calculates an indivudal's carbon footprint while pairing them with environmental NGOs using TF-IDF and cosine similarity"
+			/>
+			<ProjectCard
+				title="Let's Link"
+				wip={false}
+				href="https://github.com/mehallhm/hackbeanpot24-letslink"
+				body="Built during Hack Beanpot 2024, Let's Link is a digital tool that searches for free time between people's schedules. Integrated with Google Calander to pull realtime data"
+			/>
+			<ProjectCard
+				title="Muncher"
+				wip={false}
+				href="https://github.com/mehallhm/muncher"
+				body="A modern replacement for NU Dining - provides hours and menus for the on-campus vendors at Northeastern University build with Astro and HTMX. Part of my initiaitve under the NU Information Project"
+			/>
+			<ProjectCard
+				title="Deploy Advisor"
+				wip={false}
+				href="https://github.com/altwd"
+				body="A tool built on When I Work to provide macro statistics and algorithmically choose the best employee to deploy in ECMO Locums organisations. Built with SvelteKit"
+			/>
+			<ProjectCard
+				title="V-Form"
+				wip={false}
+				href="https://github.com/Cheyenne-Moutain-Computer-Science-Club/V-Form"
+				body="A form tool that allows the creation of distributable forms with unique and custom question. Used by 1200+ students for Student Government elections"
+			/>
+			<ProjectCard
+				title="smb-gym"
+				wip={false}
+				href="https://github.com/mehallhm/smb-gym"
+				body="A custom OpenAI gym built around Ahmed Khalifa's Java Super Mario Bros that allows for custom data and level injection for Deep Q-Learning Neural Networks"
+			/>
+			<ProjectCard
+				title="Spoon Game"
+				wip={false}
+				href="https://github.com/Cheyenne-Moutain-Computer-Science-Club/spoonSite"
+				body="A live scoreboard for the 'Spoon Game' in District 12. Built with Nextjs and Tailwind, the site allowed for Google authenticated users to 'tag' people and accumulate points"
+			/>
+		</div>
+	</main>
+</Layout>
